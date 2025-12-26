@@ -1,0 +1,493 @@
+[
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "dataclass",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "lru_cache",
+        "importPath": "functools",
+        "description": "functools",
+        "isExtraImport": true,
+        "detail": "functools",
+        "documentation": {}
+    },
+    {
+        "label": "wraps",
+        "importPath": "functools",
+        "description": "functools",
+        "isExtraImport": true,
+        "detail": "functools",
+        "documentation": {}
+    },
+    {
+        "label": "Callable",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Literal",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "requests",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "submit_answer",
+        "importPath": "aoc_utils",
+        "description": "aoc_utils",
+        "isExtraImport": true,
+        "detail": "aoc_utils",
+        "documentation": {}
+    },
+    {
+        "label": "submit_answer2",
+        "importPath": "aoc_utils",
+        "description": "aoc_utils",
+        "isExtraImport": true,
+        "detail": "aoc_utils",
+        "documentation": {}
+    },
+    {
+        "label": "get_input",
+        "importPath": "aoc_utils",
+        "description": "aoc_utils",
+        "isExtraImport": true,
+        "detail": "aoc_utils",
+        "documentation": {}
+    },
+    {
+        "label": "submit_answer",
+        "importPath": "aoc_utils",
+        "description": "aoc_utils",
+        "isExtraImport": true,
+        "detail": "aoc_utils",
+        "documentation": {}
+    },
+    {
+        "label": "submit_answer2",
+        "importPath": "aoc_utils",
+        "description": "aoc_utils",
+        "isExtraImport": true,
+        "detail": "aoc_utils",
+        "documentation": {}
+    },
+    {
+        "label": "get_input",
+        "importPath": "aoc_utils",
+        "description": "aoc_utils",
+        "isExtraImport": true,
+        "detail": "aoc_utils",
+        "documentation": {}
+    },
+    {
+        "label": "submit_answer",
+        "importPath": "aoc_utils",
+        "description": "aoc_utils",
+        "isExtraImport": true,
+        "detail": "aoc_utils",
+        "documentation": {}
+    },
+    {
+        "label": "submit_answer2",
+        "importPath": "aoc_utils",
+        "description": "aoc_utils",
+        "isExtraImport": true,
+        "detail": "aoc_utils",
+        "documentation": {}
+    },
+    {
+        "label": "get_input",
+        "importPath": "aoc_utils",
+        "description": "aoc_utils",
+        "isExtraImport": true,
+        "detail": "aoc_utils",
+        "documentation": {}
+    },
+    {
+        "label": "int_to_arr",
+        "importPath": "aoc_utils",
+        "description": "aoc_utils",
+        "isExtraImport": true,
+        "detail": "aoc_utils",
+        "documentation": {}
+    },
+    {
+        "label": "int_arr_to_int",
+        "importPath": "aoc_utils",
+        "description": "aoc_utils",
+        "isExtraImport": true,
+        "detail": "aoc_utils",
+        "documentation": {}
+    },
+    {
+        "label": "submit_answer",
+        "importPath": "aoc_utils",
+        "description": "aoc_utils",
+        "isExtraImport": true,
+        "detail": "aoc_utils",
+        "documentation": {}
+    },
+    {
+        "label": "submit_answer2",
+        "importPath": "aoc_utils",
+        "description": "aoc_utils",
+        "isExtraImport": true,
+        "detail": "aoc_utils",
+        "documentation": {}
+    },
+    {
+        "label": "get_input",
+        "importPath": "aoc_utils",
+        "description": "aoc_utils",
+        "isExtraImport": true,
+        "detail": "aoc_utils",
+        "documentation": {}
+    },
+    {
+        "label": "SubmitResult",
+        "kind": 6,
+        "importPath": "aoc_utils",
+        "description": "aoc_utils",
+        "peekOfCode": "class SubmitResult:\n    ok: bool\n    message: str\n    direction: Optional[Literal[\"higher\", \"lower\"]] = None\n    cooldown_seconds: Optional[int] = None\ndef _submit(day: int, level: int, answer: str) -> SubmitResult:\n    resp = _http().post(\n        f\"{AOC_BASE}/day/{day}/answer\",\n        data={\"level\": str(level), \"answer\": str(answer)},\n        timeout=30,",
+        "detail": "aoc_utils",
+        "documentation": {}
+    },
+    {
+        "label": "get_input",
+        "kind": 2,
+        "importPath": "aoc_utils",
+        "description": "aoc_utils",
+        "peekOfCode": "def get_input(day: int) -> list[str]:\n    r = _http().get(f\"{AOC_BASE}/day/{day}/input\", timeout=30)\n    r.raise_for_status()\n    return r.text.splitlines()\ndef submit_answer(\n    *, day: int, level: Literal[1, 2] = 1, debug: bool = False\n) -> Callable[[Callable[[], str]], Callable[[], str]]:\n    def decorator(ans_fn: Callable[[], str]) -> Callable[[], str]:\n        @wraps(ans_fn)\n        def wrapped() -> str:",
+        "detail": "aoc_utils",
+        "documentation": {}
+    },
+    {
+        "label": "submit_answer",
+        "kind": 2,
+        "importPath": "aoc_utils",
+        "description": "aoc_utils",
+        "peekOfCode": "def submit_answer(\n    *, day: int, level: Literal[1, 2] = 1, debug: bool = False\n) -> Callable[[Callable[[], str]], Callable[[], str]]:\n    def decorator(ans_fn: Callable[[], str]) -> Callable[[], str]:\n        @wraps(ans_fn)\n        def wrapped() -> str:\n            answer = str(ans_fn())\n            if debug:\n                print(f\"[debug] day {day} level {level} answer = {answer}\")\n                return answer",
+        "detail": "aoc_utils",
+        "documentation": {}
+    },
+    {
+        "label": "submit_answer1",
+        "kind": 2,
+        "importPath": "aoc_utils",
+        "description": "aoc_utils",
+        "peekOfCode": "def submit_answer1(*, day: int, debug: bool = False):\n    return submit_answer(day=day, level=1, debug=debug)\ndef submit_answer2(*, day: int, debug: bool = False):\n    return submit_answer(day=day, level=2, debug=debug)\ndef int_to_arr(n: int | str) -> list[int]:\n    return [int(ch) for ch in str(n)]\ndef int_arr_to_int(n: list[int]) -> int:\n    return int(\"\".join(map(str, n)))",
+        "detail": "aoc_utils",
+        "documentation": {}
+    },
+    {
+        "label": "submit_answer2",
+        "kind": 2,
+        "importPath": "aoc_utils",
+        "description": "aoc_utils",
+        "peekOfCode": "def submit_answer2(*, day: int, debug: bool = False):\n    return submit_answer(day=day, level=2, debug=debug)\ndef int_to_arr(n: int | str) -> list[int]:\n    return [int(ch) for ch in str(n)]\ndef int_arr_to_int(n: list[int]) -> int:\n    return int(\"\".join(map(str, n)))",
+        "detail": "aoc_utils",
+        "documentation": {}
+    },
+    {
+        "label": "int_to_arr",
+        "kind": 2,
+        "importPath": "aoc_utils",
+        "description": "aoc_utils",
+        "peekOfCode": "def int_to_arr(n: int | str) -> list[int]:\n    return [int(ch) for ch in str(n)]\ndef int_arr_to_int(n: list[int]) -> int:\n    return int(\"\".join(map(str, n)))",
+        "detail": "aoc_utils",
+        "documentation": {}
+    },
+    {
+        "label": "int_arr_to_int",
+        "kind": 2,
+        "importPath": "aoc_utils",
+        "description": "aoc_utils",
+        "peekOfCode": "def int_arr_to_int(n: list[int]) -> int:\n    return int(\"\".join(map(str, n)))",
+        "detail": "aoc_utils",
+        "documentation": {}
+    },
+    {
+        "label": "AOC_YEAR",
+        "kind": 5,
+        "importPath": "aoc_utils",
+        "description": "aoc_utils",
+        "peekOfCode": "AOC_YEAR = 2025\nAOC_BASE = f\"https://adventofcode.com/{AOC_YEAR}\"\ndef _require_session() -> str:\n    session = os.getenv(\"SESSION\")\n    if not isinstance(session, str) or not session.strip():\n        raise ValueError(\n            \"SESSION environment variable not set (expected AoC session cookie value)\"\n        )\n    return session.strip()\n@lru_cache(maxsize=1)",
+        "detail": "aoc_utils",
+        "documentation": {}
+    },
+    {
+        "label": "AOC_BASE",
+        "kind": 5,
+        "importPath": "aoc_utils",
+        "description": "aoc_utils",
+        "peekOfCode": "AOC_BASE = f\"https://adventofcode.com/{AOC_YEAR}\"\ndef _require_session() -> str:\n    session = os.getenv(\"SESSION\")\n    if not isinstance(session, str) or not session.strip():\n        raise ValueError(\n            \"SESSION environment variable not set (expected AoC session cookie value)\"\n        )\n    return session.strip()\n@lru_cache(maxsize=1)\ndef _http() -> requests.Session:",
+        "detail": "aoc_utils",
+        "documentation": {}
+    },
+    {
+        "label": "_ARTICLE_RE",
+        "kind": 5,
+        "importPath": "aoc_utils",
+        "description": "aoc_utils",
+        "peekOfCode": "_ARTICLE_RE = re.compile(\n    r\"<article[^>]*>(?P<body>.*?)</article>\", re.DOTALL | re.IGNORECASE\n)\n_P_RE = re.compile(r\"<p[^>]*>(?P<p>.*?)</p>\", re.DOTALL | re.IGNORECASE)\n_TAG_RE = re.compile(r\"<[^>]+>\")\ndef _html_article_paragraphs(html: str) -> list[str]:\n    m = _ARTICLE_RE.search(html)\n    if not m:\n        return []\n    body = m.group(\"body\")",
+        "detail": "aoc_utils",
+        "documentation": {}
+    },
+    {
+        "label": "_P_RE",
+        "kind": 5,
+        "importPath": "aoc_utils",
+        "description": "aoc_utils",
+        "peekOfCode": "_P_RE = re.compile(r\"<p[^>]*>(?P<p>.*?)</p>\", re.DOTALL | re.IGNORECASE)\n_TAG_RE = re.compile(r\"<[^>]+>\")\ndef _html_article_paragraphs(html: str) -> list[str]:\n    m = _ARTICLE_RE.search(html)\n    if not m:\n        return []\n    body = m.group(\"body\")\n    ps = []\n    for pm in _P_RE.finditer(body):\n        text = _TAG_RE.sub(\"\", pm.group(\"p\"))",
+        "detail": "aoc_utils",
+        "documentation": {}
+    },
+    {
+        "label": "_TAG_RE",
+        "kind": 5,
+        "importPath": "aoc_utils",
+        "description": "aoc_utils",
+        "peekOfCode": "_TAG_RE = re.compile(r\"<[^>]+>\")\ndef _html_article_paragraphs(html: str) -> list[str]:\n    m = _ARTICLE_RE.search(html)\n    if not m:\n        return []\n    body = m.group(\"body\")\n    ps = []\n    for pm in _P_RE.finditer(body):\n        text = _TAG_RE.sub(\"\", pm.group(\"p\"))\n        text = (",
+        "detail": "aoc_utils",
+        "documentation": {}
+    },
+    {
+        "label": "_COOLDOWN_RE",
+        "kind": 5,
+        "importPath": "aoc_utils",
+        "description": "aoc_utils",
+        "peekOfCode": "_COOLDOWN_RE = re.compile(\n    r\"(?P<mins>\\d+)\\s*m(?:in(?:ute)?s?)?\\s*(?P<secs>\\d+)\\s*s|(?P<secs_only>\\d+)\\s*s\",\n    re.IGNORECASE,\n)\ndef _parse_cooldown_seconds(msg: str) -> Optional[int]:\n    if \"left to wait\" not in msg.lower() and \"wait\" not in msg.lower():\n        return None\n    m = _COOLDOWN_RE.search(msg)\n    if not m:\n        return None",
+        "detail": "aoc_utils",
+        "documentation": {}
+    },
+    {
+        "label": "solve_1",
+        "kind": 2,
+        "importPath": "q1",
+        "description": "q1",
+        "peekOfCode": "def solve_1() -> str:\n    point = 50\n    total = 0\n    for line in LINES:\n        if len(line) == 0:\n            break\n        direction, magnitude = line[0], int(line[1:])\n        if direction == \"R\":\n            point = (point + magnitude) % 100\n        else:",
+        "detail": "q1",
+        "documentation": {}
+    },
+    {
+        "label": "solve_2",
+        "kind": 2,
+        "importPath": "q1",
+        "description": "q1",
+        "peekOfCode": "def solve_2() -> str:\n    point = 50\n    total = 0\n    for line in LINES:\n        if len(line) == 0:\n            break\n        direction, magnitude = line[0], int(line[1:])\n        if direction == \"R\":\n            raw_point = point + magnitude\n            total += raw_point // 100",
+        "detail": "q1",
+        "documentation": {}
+    },
+    {
+        "label": "YEAR",
+        "kind": 5,
+        "importPath": "q1",
+        "description": "q1",
+        "peekOfCode": "YEAR = 2025\nDAY = 1\nLINES = get_input(DAY)\n@submit_answer(day=DAY, debug=False)\ndef solve_1() -> str:\n    point = 50\n    total = 0\n    for line in LINES:\n        if len(line) == 0:\n            break",
+        "detail": "q1",
+        "documentation": {}
+    },
+    {
+        "label": "DAY",
+        "kind": 5,
+        "importPath": "q1",
+        "description": "q1",
+        "peekOfCode": "DAY = 1\nLINES = get_input(DAY)\n@submit_answer(day=DAY, debug=False)\ndef solve_1() -> str:\n    point = 50\n    total = 0\n    for line in LINES:\n        if len(line) == 0:\n            break\n        direction, magnitude = line[0], int(line[1:])",
+        "detail": "q1",
+        "documentation": {}
+    },
+    {
+        "label": "LINES",
+        "kind": 5,
+        "importPath": "q1",
+        "description": "q1",
+        "peekOfCode": "LINES = get_input(DAY)\n@submit_answer(day=DAY, debug=False)\ndef solve_1() -> str:\n    point = 50\n    total = 0\n    for line in LINES:\n        if len(line) == 0:\n            break\n        direction, magnitude = line[0], int(line[1:])\n        if direction == \"R\":",
+        "detail": "q1",
+        "documentation": {}
+    },
+    {
+        "label": "solve_1",
+        "kind": 2,
+        "importPath": "q2",
+        "description": "q2",
+        "peekOfCode": "def solve_1() -> str:\n    total = 0\n    for line in LINES:\n        id_low, id_high = line.split(\"-\")\n        for i in range(int(id_low), int(id_high)+1):\n            s = str(i)\n            if len(s) % 2 == 1:\n                continue\n            first_half = s[:len(s)//2]\n            if s == first_half * 2:",
+        "detail": "q2",
+        "documentation": {}
+    },
+    {
+        "label": "solve_2",
+        "kind": 2,
+        "importPath": "q2",
+        "description": "q2",
+        "peekOfCode": "def solve_2() -> str:\n    total = 0\n    for line in LINES:\n        id_low, id_high = line.split(\"-\")\n        for i in range(int(id_low), int(id_high)+1):\n            s = str(i)\n            len_s = len(s)\n            factors = []\n            for j in range(1, len_s):\n                if len_s % j == 0:",
+        "detail": "q2",
+        "documentation": {}
+    },
+    {
+        "label": "DAY",
+        "kind": 5,
+        "importPath": "q2",
+        "description": "q2",
+        "peekOfCode": "DAY = 2\nLINES = get_input(DAY, delim=\",\")\n@submit_answer(day=DAY)\ndef solve_1() -> str:\n    total = 0\n    for line in LINES:\n        id_low, id_high = line.split(\"-\")\n        for i in range(int(id_low), int(id_high)+1):\n            s = str(i)\n            if len(s) % 2 == 1:",
+        "detail": "q2",
+        "documentation": {}
+    },
+    {
+        "label": "LINES",
+        "kind": 5,
+        "importPath": "q2",
+        "description": "q2",
+        "peekOfCode": "LINES = get_input(DAY, delim=\",\")\n@submit_answer(day=DAY)\ndef solve_1() -> str:\n    total = 0\n    for line in LINES:\n        id_low, id_high = line.split(\"-\")\n        for i in range(int(id_low), int(id_high)+1):\n            s = str(i)\n            if len(s) % 2 == 1:\n                continue",
+        "detail": "q2",
+        "documentation": {}
+    },
+    {
+        "label": "solve_1",
+        "kind": 2,
+        "importPath": "q3",
+        "description": "q3",
+        "peekOfCode": "def solve_1():\n    sum = 0\n    for line in LINES:\n        if len(line) == 0:\n            break\n        s = int_to_arr(line)\n        m = max(s)\n        start_idx = s.index(m)\n        if len(s[start_idx + 1 :]) > 0:\n            m2 = max(s[start_idx + 1 :])",
+        "detail": "q3",
+        "documentation": {}
+    },
+    {
+        "label": "solve_2",
+        "kind": 2,
+        "importPath": "q3",
+        "description": "q3",
+        "peekOfCode": "def solve_2():\n    tot = 0\n    for line in LINES:\n        tot += int_arr_to_int(best_subseq_len_L(int_to_arr(line), 12))\n    return tot\ndef best_subseq_len_L(s: list[int], L: int) -> list[int]:\n    n = len(s)\n    if L <= 0:\n        return []\n    if n == L:",
+        "detail": "q3",
+        "documentation": {}
+    },
+    {
+        "label": "best_subseq_len_L",
+        "kind": 2,
+        "importPath": "q3",
+        "description": "q3",
+        "peekOfCode": "def best_subseq_len_L(s: list[int], L: int) -> list[int]:\n    n = len(s)\n    if L <= 0:\n        return []\n    if n == L:\n        return s[:]\n    k = n - L\n    window = s[: k + 1]\n    m = max(window)\n    i = window.index(m)",
+        "detail": "q3",
+        "documentation": {}
+    },
+    {
+        "label": "solve_2_stack",
+        "kind": 2,
+        "importPath": "q3",
+        "description": "q3",
+        "peekOfCode": "def solve_2_stack():\n    tot = 0\n    for line in LINES:\n        ns = int_to_arr(line)\n        stack = []\n        k = len(ns) - 12\n        for n in ns:\n            while k > 0 and stack and stack[-1] < n:\n                stack.pop()\n                k -= 1",
+        "detail": "q3",
+        "documentation": {}
+    },
+    {
+        "label": "DAY",
+        "kind": 5,
+        "importPath": "q3",
+        "description": "q3",
+        "peekOfCode": "DAY = 3\nLINES = get_input(DAY)\n@submit_answer(day=DAY)\ndef solve_1():\n    sum = 0\n    for line in LINES:\n        if len(line) == 0:\n            break\n        s = int_to_arr(line)\n        m = max(s)",
+        "detail": "q3",
+        "documentation": {}
+    },
+    {
+        "label": "LINES",
+        "kind": 5,
+        "importPath": "q3",
+        "description": "q3",
+        "peekOfCode": "LINES = get_input(DAY)\n@submit_answer(day=DAY)\ndef solve_1():\n    sum = 0\n    for line in LINES:\n        if len(line) == 0:\n            break\n        s = int_to_arr(line)\n        m = max(s)\n        start_idx = s.index(m)",
+        "detail": "q3",
+        "documentation": {}
+    },
+    {
+        "label": "solve_1",
+        "kind": 2,
+        "importPath": "q_template",
+        "description": "q_template",
+        "peekOfCode": "def solve_1():\n    return \"\"\n@submit_answer2(day=DAY, debug=True)\ndef solve_2():\n    return \"\"\nsolve_1()\n# solve_2()",
+        "detail": "q_template",
+        "documentation": {}
+    },
+    {
+        "label": "solve_2",
+        "kind": 2,
+        "importPath": "q_template",
+        "description": "q_template",
+        "peekOfCode": "def solve_2():\n    return \"\"\nsolve_1()\n# solve_2()",
+        "detail": "q_template",
+        "documentation": {}
+    },
+    {
+        "label": "DAY",
+        "kind": 5,
+        "importPath": "q_template",
+        "description": "q_template",
+        "peekOfCode": "DAY = 0\nLINES = get_input(DAY, delim=\"\\n\")\n@submit_answer(day=DAY, debug=True)\ndef solve_1():\n    return \"\"\n@submit_answer2(day=DAY, debug=True)\ndef solve_2():\n    return \"\"\nsolve_1()\n# solve_2()",
+        "detail": "q_template",
+        "documentation": {}
+    },
+    {
+        "label": "LINES",
+        "kind": 5,
+        "importPath": "q_template",
+        "description": "q_template",
+        "peekOfCode": "LINES = get_input(DAY, delim=\"\\n\")\n@submit_answer(day=DAY, debug=True)\ndef solve_1():\n    return \"\"\n@submit_answer2(day=DAY, debug=True)\ndef solve_2():\n    return \"\"\nsolve_1()\n# solve_2()",
+        "detail": "q_template",
+        "documentation": {}
+    }
+]
