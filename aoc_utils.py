@@ -115,8 +115,7 @@ def _submit(day: int, level: int, answer: str) -> SubmitResult:
     paragraphs = _html_article_paragraphs(resp.text)
     msg = paragraphs[0] if paragraphs else resp.text
 
-    ok = "right answer" in msg.lower()
-
+    ok = "that's the right answer" in msg.lower()
     return SubmitResult(
         ok=ok,
         message=msg,
@@ -139,6 +138,7 @@ def submit_answer(
         @wraps(ans_fn)
         def wrapped() -> str:
             answer = str(ans_fn())
+            print(f"answer: {answer}")
 
             if debug:
                 print(f"[debug] day {day} level {level} answer = {answer}")
@@ -147,7 +147,6 @@ def submit_answer(
             try:
                 result = _submit(day=day, level=level, answer=answer)
             except requests.RequestException as e:
-                # Network / HTTP errors
                 raise RuntimeError(
                     f"Failed to submit AoC answer (day={day}, level={level}): {e}"
                 ) from e

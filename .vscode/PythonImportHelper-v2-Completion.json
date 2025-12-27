@@ -203,6 +203,62 @@
         "documentation": {}
     },
     {
+        "label": "int_arr_to_int",
+        "importPath": "aoc_utils",
+        "description": "aoc_utils",
+        "isExtraImport": true,
+        "detail": "aoc_utils",
+        "documentation": {}
+    },
+    {
+        "label": "int_to_arr",
+        "importPath": "aoc_utils",
+        "description": "aoc_utils",
+        "isExtraImport": true,
+        "detail": "aoc_utils",
+        "documentation": {}
+    },
+    {
+        "label": "submit_answer",
+        "importPath": "aoc_utils",
+        "description": "aoc_utils",
+        "isExtraImport": true,
+        "detail": "aoc_utils",
+        "documentation": {}
+    },
+    {
+        "label": "submit_answer2",
+        "importPath": "aoc_utils",
+        "description": "aoc_utils",
+        "isExtraImport": true,
+        "detail": "aoc_utils",
+        "documentation": {}
+    },
+    {
+        "label": "get_input",
+        "importPath": "aoc_utils",
+        "description": "aoc_utils",
+        "isExtraImport": true,
+        "detail": "aoc_utils",
+        "documentation": {}
+    },
+    {
+        "label": "int_arr_to_int",
+        "importPath": "aoc_utils",
+        "description": "aoc_utils",
+        "isExtraImport": true,
+        "detail": "aoc_utils",
+        "documentation": {}
+    },
+    {
+        "label": "int_to_arr",
+        "importPath": "aoc_utils",
+        "description": "aoc_utils",
+        "isExtraImport": true,
+        "detail": "aoc_utils",
+        "documentation": {}
+    },
+    {
         "label": "SubmitResult",
         "kind": 6,
         "importPath": "aoc_utils",
@@ -225,7 +281,7 @@
         "kind": 2,
         "importPath": "aoc_utils",
         "description": "aoc_utils",
-        "peekOfCode": "def submit_answer(\n    *, day: int, level: Literal[1, 2] = 1, debug: bool = False\n) -> Callable[[Callable[[], str]], Callable[[], str]]:\n    def decorator(ans_fn: Callable[[], str]) -> Callable[[], str]:\n        @wraps(ans_fn)\n        def wrapped() -> str:\n            answer = str(ans_fn())\n            if debug:\n                print(f\"[debug] day {day} level {level} answer = {answer}\")\n                return answer",
+        "peekOfCode": "def submit_answer(\n    *, day: int, level: Literal[1, 2] = 1, debug: bool = False\n) -> Callable[[Callable[[], str]], Callable[[], str]]:\n    def decorator(ans_fn: Callable[[], str]) -> Callable[[], str]:\n        @wraps(ans_fn)\n        def wrapped() -> str:\n            answer = str(ans_fn())\n            print(f\"answer: {answer}\")\n            if debug:\n                print(f\"[debug] day {day} level {level} answer = {answer}\")",
         "detail": "aoc_utils",
         "documentation": {}
     },
@@ -457,6 +513,51 @@
     {
         "label": "solve_1",
         "kind": 2,
+        "importPath": "q4",
+        "description": "q4",
+        "peekOfCode": "def solve_1():\n    tot = 0\n    for idx, line in enumerate(LINES):\n        for jdx, char in enumerate(line):\n            if char != \"@\":\n                continue\n            count = 0\n            for dir in DIRECTIONS:\n                didx = idx + dir[0]\n                djdx = jdx + dir[1]",
+        "detail": "q4",
+        "documentation": {}
+    },
+    {
+        "label": "solve_2",
+        "kind": 2,
+        "importPath": "q4",
+        "description": "q4",
+        "peekOfCode": "def solve_2():\n    tot = 0\n    idx_set = set()\n    lines = [list(line) for line in LINES]\n    iter = 0\n    while True:\n        iter += 1\n        for idx, line in enumerate(lines):\n            for jdx, char in enumerate(line):\n                if char != \"@\":",
+        "detail": "q4",
+        "documentation": {}
+    },
+    {
+        "label": "DAY",
+        "kind": 5,
+        "importPath": "q4",
+        "description": "q4",
+        "peekOfCode": "DAY = 4\nLINES = get_input(DAY)\nDIRECTIONS = {(-1, -1), (-1, 1), (1, -1), (1, 1), (0, 1), (0, -1), (1, 0), (-1, 0)}\n@submit_answer(day=DAY, debug=True)\ndef solve_1():\n    tot = 0\n    for idx, line in enumerate(LINES):\n        for jdx, char in enumerate(line):\n            if char != \"@\":\n                continue",
+        "detail": "q4",
+        "documentation": {}
+    },
+    {
+        "label": "LINES",
+        "kind": 5,
+        "importPath": "q4",
+        "description": "q4",
+        "peekOfCode": "LINES = get_input(DAY)\nDIRECTIONS = {(-1, -1), (-1, 1), (1, -1), (1, 1), (0, 1), (0, -1), (1, 0), (-1, 0)}\n@submit_answer(day=DAY, debug=True)\ndef solve_1():\n    tot = 0\n    for idx, line in enumerate(LINES):\n        for jdx, char in enumerate(line):\n            if char != \"@\":\n                continue\n            count = 0",
+        "detail": "q4",
+        "documentation": {}
+    },
+    {
+        "label": "DIRECTIONS",
+        "kind": 5,
+        "importPath": "q4",
+        "description": "q4",
+        "peekOfCode": "DIRECTIONS = {(-1, -1), (-1, 1), (1, -1), (1, 1), (0, 1), (0, -1), (1, 0), (-1, 0)}\n@submit_answer(day=DAY, debug=True)\ndef solve_1():\n    tot = 0\n    for idx, line in enumerate(LINES):\n        for jdx, char in enumerate(line):\n            if char != \"@\":\n                continue\n            count = 0\n            for dir in DIRECTIONS:",
+        "detail": "q4",
+        "documentation": {}
+    },
+    {
+        "label": "solve_1",
+        "kind": 2,
         "importPath": "q_template",
         "description": "q_template",
         "peekOfCode": "def solve_1():\n    return \"\"\n@submit_answer2(day=DAY, debug=True)\ndef solve_2():\n    return \"\"\nsolve_1()\n# solve_2()",
@@ -477,7 +578,7 @@
         "kind": 5,
         "importPath": "q_template",
         "description": "q_template",
-        "peekOfCode": "DAY = 0\nLINES = get_input(DAY, delim=\"\\n\")\n@submit_answer(day=DAY, debug=True)\ndef solve_1():\n    return \"\"\n@submit_answer2(day=DAY, debug=True)\ndef solve_2():\n    return \"\"\nsolve_1()\n# solve_2()",
+        "peekOfCode": "DAY = 0\nLINES = get_input(DAY)\n@submit_answer(day=DAY, debug=True)\ndef solve_1():\n    return \"\"\n@submit_answer2(day=DAY, debug=True)\ndef solve_2():\n    return \"\"\nsolve_1()\n# solve_2()",
         "detail": "q_template",
         "documentation": {}
     },
@@ -486,7 +587,7 @@
         "kind": 5,
         "importPath": "q_template",
         "description": "q_template",
-        "peekOfCode": "LINES = get_input(DAY, delim=\"\\n\")\n@submit_answer(day=DAY, debug=True)\ndef solve_1():\n    return \"\"\n@submit_answer2(day=DAY, debug=True)\ndef solve_2():\n    return \"\"\nsolve_1()\n# solve_2()",
+        "peekOfCode": "LINES = get_input(DAY)\n@submit_answer(day=DAY, debug=True)\ndef solve_1():\n    return \"\"\n@submit_answer2(day=DAY, debug=True)\ndef solve_2():\n    return \"\"\nsolve_1()\n# solve_2()",
         "detail": "q_template",
         "documentation": {}
     }
