@@ -259,6 +259,86 @@
         "documentation": {}
     },
     {
+        "label": "submit_answer",
+        "importPath": "aoc_utils",
+        "description": "aoc_utils",
+        "isExtraImport": true,
+        "detail": "aoc_utils",
+        "documentation": {}
+    },
+    {
+        "label": "submit_answer2",
+        "importPath": "aoc_utils",
+        "description": "aoc_utils",
+        "isExtraImport": true,
+        "detail": "aoc_utils",
+        "documentation": {}
+    },
+    {
+        "label": "get_input",
+        "importPath": "aoc_utils",
+        "description": "aoc_utils",
+        "isExtraImport": true,
+        "detail": "aoc_utils",
+        "documentation": {}
+    },
+    {
+        "label": "int_arr_to_int",
+        "importPath": "aoc_utils",
+        "description": "aoc_utils",
+        "isExtraImport": true,
+        "detail": "aoc_utils",
+        "documentation": {}
+    },
+    {
+        "label": "int_to_arr",
+        "importPath": "aoc_utils",
+        "description": "aoc_utils",
+        "isExtraImport": true,
+        "detail": "aoc_utils",
+        "documentation": {}
+    },
+    {
+        "label": "submit_answer",
+        "importPath": "aoc_utils",
+        "description": "aoc_utils",
+        "isExtraImport": true,
+        "detail": "aoc_utils",
+        "documentation": {}
+    },
+    {
+        "label": "submit_answer2",
+        "importPath": "aoc_utils",
+        "description": "aoc_utils",
+        "isExtraImport": true,
+        "detail": "aoc_utils",
+        "documentation": {}
+    },
+    {
+        "label": "get_input",
+        "importPath": "aoc_utils",
+        "description": "aoc_utils",
+        "isExtraImport": true,
+        "detail": "aoc_utils",
+        "documentation": {}
+    },
+    {
+        "label": "int_arr_to_int",
+        "importPath": "aoc_utils",
+        "description": "aoc_utils",
+        "isExtraImport": true,
+        "detail": "aoc_utils",
+        "documentation": {}
+    },
+    {
+        "label": "int_to_arr",
+        "importPath": "aoc_utils",
+        "description": "aoc_utils",
+        "isExtraImport": true,
+        "detail": "aoc_utils",
+        "documentation": {}
+    },
+    {
         "label": "SubmitResult",
         "kind": 6,
         "importPath": "aoc_utils",
@@ -553,6 +633,78 @@
         "description": "q4",
         "peekOfCode": "DIRECTIONS = {(-1, -1), (-1, 1), (1, -1), (1, 1), (0, 1), (0, -1), (1, 0), (-1, 0)}\n@submit_answer(day=DAY, debug=True)\ndef solve_1():\n    tot = 0\n    for idx, line in enumerate(LINES):\n        for jdx, char in enumerate(line):\n            if char != \"@\":\n                continue\n            count = 0\n            for dir in DIRECTIONS:",
         "detail": "q4",
+        "documentation": {}
+    },
+    {
+        "label": "solve_1",
+        "kind": 2,
+        "importPath": "q5",
+        "description": "q5",
+        "peekOfCode": "def solve_1():\n    val_idx = -1\n    s = 0\n    ranges = []\n    for idx, line in enumerate(LINES):\n        if line == \"\":\n            val_idx = idx\n            break\n        left, right = map(int, line.split(\"-\"))\n        ranges.append((left, right))",
+        "detail": "q5",
+        "documentation": {}
+    },
+    {
+        "label": "solve_2",
+        "kind": 2,
+        "importPath": "q5",
+        "description": "q5",
+        "peekOfCode": "def solve_2():\n    s = 0\n    ranges = []\n    for idx, line in enumerate(LINES):\n        if line == \"\":\n            break\n        left, right = map(int, line.split(\"-\"))\n        ranges.append((left, right))\n    ranges = sorted(ranges, key=lambda x: (x[0], x[1]))\n    real_ranges = []",
+        "detail": "q5",
+        "documentation": {}
+    },
+    {
+        "label": "DAY",
+        "kind": 5,
+        "importPath": "q5",
+        "description": "q5",
+        "peekOfCode": "DAY = 5\nLINES = get_input(DAY)\n@submit_answer(day=DAY, debug=False)\ndef solve_1():\n    val_idx = -1\n    s = 0\n    ranges = []\n    for idx, line in enumerate(LINES):\n        if line == \"\":\n            val_idx = idx",
+        "detail": "q5",
+        "documentation": {}
+    },
+    {
+        "label": "LINES",
+        "kind": 5,
+        "importPath": "q5",
+        "description": "q5",
+        "peekOfCode": "LINES = get_input(DAY)\n@submit_answer(day=DAY, debug=False)\ndef solve_1():\n    val_idx = -1\n    s = 0\n    ranges = []\n    for idx, line in enumerate(LINES):\n        if line == \"\":\n            val_idx = idx\n            break",
+        "detail": "q5",
+        "documentation": {}
+    },
+    {
+        "label": "solve_1",
+        "kind": 2,
+        "importPath": "q6",
+        "description": "q6",
+        "peekOfCode": "def solve_1():\n    lines = []\n    # print(LINES)\n    for line in LINES:\n        lines.append(line.split())\n    lines = [[row[i] for row in lines] for i in range(len(lines[0]))]\n    for line in lines:\n        op = line[-1]\n        vals = list(map(int, line[:-1]))\n    return \"\"",
+        "detail": "q6",
+        "documentation": {}
+    },
+    {
+        "label": "solve_2",
+        "kind": 2,
+        "importPath": "q6",
+        "description": "q6",
+        "peekOfCode": "def solve_2():\n    return \"\"\nsolve_1()\n# solve_2()",
+        "detail": "q6",
+        "documentation": {}
+    },
+    {
+        "label": "DAY",
+        "kind": 5,
+        "importPath": "q6",
+        "description": "q6",
+        "peekOfCode": "DAY = 6\nLINES = get_input(DAY)\n@submit_answer(day=DAY, debug=True)\ndef solve_1():\n    lines = []\n    # print(LINES)\n    for line in LINES:\n        lines.append(line.split())\n    lines = [[row[i] for row in lines] for i in range(len(lines[0]))]\n    for line in lines:",
+        "detail": "q6",
+        "documentation": {}
+    },
+    {
+        "label": "LINES",
+        "kind": 5,
+        "importPath": "q6",
+        "description": "q6",
+        "peekOfCode": "LINES = get_input(DAY)\n@submit_answer(day=DAY, debug=True)\ndef solve_1():\n    lines = []\n    # print(LINES)\n    for line in LINES:\n        lines.append(line.split())\n    lines = [[row[i] for row in lines] for i in range(len(lines[0]))]\n    for line in lines:\n        op = line[-1]",
+        "detail": "q6",
         "documentation": {}
     },
     {
